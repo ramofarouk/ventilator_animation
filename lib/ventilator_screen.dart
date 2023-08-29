@@ -98,6 +98,7 @@ class _VentilatorScreenState extends State<VentilatorScreen>
     );
   }
 
+
   updateVentilator(int step) {
     List<int> values = [400, 300, 100];
     _controller.duration = Duration(milliseconds: values[step - 1]);
@@ -119,7 +120,7 @@ class _VentilatorScreenState extends State<VentilatorScreen>
     );
   }
 
-  getBottomCircle() {
+  Container getBottomCircle() {
     return Container(
       height: 50,
       width: Dimension.getScreenWidth(context) * 0.5,
@@ -138,7 +139,7 @@ class _VentilatorScreenState extends State<VentilatorScreen>
     );
   }
 
-  getControlZone() {
+  Positioned getControlZone() {
     return Positioned(
         top: Dimension.getScreenHeight(context) * 0.35,
         child: Container(
@@ -233,7 +234,7 @@ class _VentilatorScreenState extends State<VentilatorScreen>
         ));
   }
 
-  getAllBats() {
+  Widget getAllBats() {
     return AnimatedBuilder(
         animation: _controller,
         builder: (context, child) {
