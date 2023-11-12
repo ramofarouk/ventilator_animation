@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
 
 class ButtonFan extends StatelessWidget {
+
   final VoidCallback callback;
   final int value, step;
+
   const ButtonFan(
-      {required this.callback,
-      required this.value,
-      required this.step,
-      super.key});
+      {
+        required this.callback,
+        required this.value,
+        required this.step,
+        super.key
+      }
+  );
 
   @override
   Widget build(BuildContext context) {
